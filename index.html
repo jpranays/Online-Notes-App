@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Notes</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <nav>
+        <div class="brand">Online Notes</div>
+        <ul class="link">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Help</a></li>
+            <li><a href="#">Contact us</a></li>
+        </ul>
+        <div class="login"><a href="#modal-login" data-toggle="modal" class="btn btn-default">Login</a></div>
+        <div class="button">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </nav>
+    <div class="jumbotron">
+        <h1>Online Notes App
+        </h1>
+        <h4>Your Notes with you wherever you go.
+        </h4>
+        <h3>
+            Easy to use,protects all your notes !
+        </h3>
+        <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#modal-register">Signup</button>
+    </div>
+    <form method="POST" id="signupform">
+        <div class="modal fade" id="modal-register">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">Sign up today and Start using our Online Notes App !
+                        <span><a class="close" data-dismiss="modal">&times;</a></span>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div id="signupmessage"></div>
+                            <input type="text" maxlength="30" class="form-control" name="username" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Email" maxlength="50" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="password" placeholder="Password" maxlength="50" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <input type="password" name="cpassword" placeholder="Confirm Password" maxlength="50" class="form-control">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <input type="submit" name="signup" class="btn btn-success" value="Sign up">
+                        <button class="btn btn-default" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </form>
+
+    <form method="POST" id="loginform">
+        <div class="modal  fade" id="modal-login">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">Login
+                        <a data-dismiss="modal" class="close">&times;</a>
+                    </div>
+                    <div class="modal-body">
+                        <div id="loginmessage"></div>
+                        <div class="form-group">
+                            <input type="loginemail" name="loginemail" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input type="loginpassword" name="loginpassword" class="form-control" placeholder="Password">
+                        </div>
+
+                        <input type="checkbox" name="loginrememberME" checked="checked"> Remember me
+
+                        <a href="#" class="pull-right">Forgot Password ?</a>
+                    </div>
+                    <div class="modal-footer">
+                        <button data-dismiss="modal" data-toggle="modal" data-target="#modal-register" class="btn btn-default pull-left">Register</button>
+                        <input type="submit" name="login" value="Login" class="btn btn-success">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </form>
+    <div class="footer">&nbsp;@&nbsp;Develop with 15</div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

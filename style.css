@@ -1,0 +1,110 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'arvo', monospace;
+}
+
+nav {
+    display: flex;
+    height: 10vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.brand {
+    margin-right: auto;
+    font-size: 22px;
+    margin-left: 2px;
+    font-weight: 900;
+}
+
+.link {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+    align-items: center;
+}
+
+.link a,
+.link li {
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+}
+
+.link li::after {
+    content: "";
+    display: block;
+    position: relative;
+    height: 2px;
+    left: 5%;
+    transition: all 0.5s linear;
+    transform: scaleX(0);
+    background-color: darkblue
+}
+
+.link li:hover::after {
+    transform: scaleX(1.5);
+}
+
+.login a {
+    text-decoration: none;
+    font-size: 21px;
+}
+
+.login {
+    margin-right: 2px;
+}
+
+@media screen and (max-width:768px) {
+    .button {
+        margin: 0 20px;
+        cursor: pointer;
+    }
+    .bar {
+        width: 30px;
+        height: 3px;
+        margin: 5px;
+        background: black;
+    }
+    .link {
+        flex-direction: column;
+        position: fixed;
+        top: 10vh;
+        height: 90vh;
+        /* right: -50%; */
+        transition: all 1s linear;
+        opacity: 0;
+        background-color: white;
+        width: 100%;
+        clip-path: circle(0%);
+    }
+    .link.open {
+        /* right: 0; */
+        opacity: 1;
+        clip-path: circle(90%);
+    }
+}
+
+.jumbotron {
+    text-align: center;
+    margin-top: 130px;
+    background-color: transparent;
+}
+
+.jumbotron h1 {
+    margin: 40px 0;
+}
+
+.btn-lg {
+    margin: 20px 0;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    padding: 20px;
+}
